@@ -1,30 +1,101 @@
-# React + TypeScript + Vite
+# ULTATEL React/NestJs CRUD Task
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+This repository contains the frontend of the ULTATEL Frontend Task, a CRUD application for managing student records. It is built using React, TypeScript, Tailwind CSS, and SweetAlert for a modern, responsive, and user-friendly interface.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- **User Authentication**: Secure login and registration.
+- **Student Management**: Full CRUD operations for students.
+  - **Create**: Add new students.
+  - **Read**: View student details.
+  - **Update**: Edit existing student information.
+  - **Delete**: Remove student records.
+- **Search & Filter**: Easily search and filter students by:
+  - Name
+  - Gender
+  - Country
+  - Age
+- **Pagination & Sorting**: Efficiently handle large student lists with pagination and sorting.
+- **Responsive Design**: Fully responsive layout using Tailwind CSS.
+- **Interactive Alerts**: Utilize SweetAlert for user notifications and confirmations.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Setup
 
-- Configure the top-level `parserOptions` property like this:
+### Prerequisites
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+Ensure you have the following installed on your machine:
+
+- Node.js
+- npm (Node Package Manager)
+
+### Installation
+
+1. **Clone the Repository**
+
+   ```sh
+   git clone https://github.com/mahmudhmh/ultatel-react-client.git
+   cd ultatel-react-client
+   ```
+
+2. **Install Dependencies**
+
+   ```sh
+   npm install
+   ```
+
+3. **Run the Application**
+
+   ```sh
+   npm run dev
+   ```
+
+   The application will be available at `http://localhost:5173`.
+
+### Key Libraries
+
+- **React**: A JavaScript library for building user interfaces.
+- **TypeScript**: A typed superset of JavaScript.
+- **Tailwind CSS**: A utility-first CSS framework for rapid UI development.
+- **SweetAlert2**: A beautiful, responsive, customizable replacement for JavaScript's popup boxes.
+- **React Router**: For navigation and routing.
+- **Axios**: For making HTTP requests.
+
+### Development Commands
+
+- **Start Development Server**
+
+  ```sh
+  npm start
+  ```
+
+- **Build for Production**
+
+  ```sh
+  npm run build
+  ```
+
+- **Run Tests**
+
+  ```sh
+  npm test
+  ```
+
+### Deployment
+
+For deployment, ensure the backend API base URL is correctly set in the environment variables, and build the application for production.
+
+```sh
+npm run build
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Deploy the `build` folder to your preferred hosting service.
+
+### Application Screens
+
+- [Screen Shots](https://drive.google.com/drive/u/2/folders/1HM1BReF6zT0P-FsuZSxYlU08VVEbHFmZ)
+
+### Contact
+
+For any questions or support, please contact `mahmudhmh.business@gmail.com`.
