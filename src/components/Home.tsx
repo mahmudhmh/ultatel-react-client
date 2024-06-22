@@ -147,7 +147,15 @@ const Home: React.FC = () => {
   const handleDelete = async (id: number) => {
     try {
       await api.deleteStudent(id, token!);
-      Swal.fire("Success", "Student deleted successfully", "success");
+      Swal.fire({
+        title: "Confirm Delete",
+        text: "Are you sure you want to delete this student?",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonText: "Yes, delete it!",
+        cancelButtonText: "No, cancel!",
+        confirmButtonColor: "#dc2626",
+      });
       fetchStudents();
     } catch (error) {
       Swal.fire("Error", "Failed to delete student", "error");
@@ -206,6 +214,11 @@ const Home: React.FC = () => {
   return (
     <div className="p-8">
       <div className="mb-4 flex justify-between items-center">
+        <img
+          src="https://blog.ultatel.com/_next/static/media/logo-ultatel.8ca0c4a1.webp"
+          alt="ULTATEL Logo"
+          className="mb-1 w-60"
+        />
         <h2 className="text-2xl font-bold text-gray-800 dark:text-white">
           Students CRUD
         </h2>
